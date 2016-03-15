@@ -1,0 +1,12 @@
+rootProject.name = 'MyProject'
+
+include ':app'
+
+include ':react-native-seekbar-android', ':app'
+project(':react-native-seekbar-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-seekbar-android')
+
+include ':react-native-fs'
+project(':react-native-fs').projectDir = new File(settingsDir, '../node_modules/react-native-fs/android')
+
+include ':react-native-device-battery'
+project(':react-native-device-battery').projectDir = new File(settingsDir, '../node_modules/react-native-device-battery/android')
